@@ -40,7 +40,7 @@ def main():
 	unique = False
 
 	#Pick random recipient for each person until everyone gets someone other than themselves
-	while !unique:
+	while not unique:
 		getters = list(partics)
 		for partic in partics:
 			getter = getters[random.randint(0, len(getters) - 1)]
