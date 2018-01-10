@@ -52,8 +52,9 @@ def main():
 			partic.recipient = getter
 
 			#Check if the last person got themself
-			if !(len(getters) == 1 and partic.name == getter.name):
-				unique = True
+			if len(getters) == 1:
+                                if not partic.name == getter.name:
+                                        unique = True
 			getters.remove(getter)
 			
 	#Send each partic the email containing their assignment
