@@ -21,7 +21,7 @@ class Participant:
 		msg['Subject'] = "Secret Santa info enclosed"
 
 		#Setup the email message
-		msg.attach(MIMEText("Hello Corpsman,\n\n\tYou have been assigned " + self.recipient.name + " for our 2017 Secret Santa. Here is their list:\n"))
+		msg.attach(MIMEText("Hello " + self.name + ",\n\n\tYou have been assigned " + self.recipient.name + " for Secret Santa. Here is their list:\n"))
 		msg.attach(MIMEText(self.recipient.list, 'plain'))
 		msg.attach(MIMEText(signature, 'plain'))
 
