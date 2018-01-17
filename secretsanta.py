@@ -7,9 +7,13 @@ from tkinter import messagebox
 
 #Create widgets (root, labels, buttons, entries)
 root = tk.Tk()
-step1_lab = tk.Label(root, text = "1. Add participants' names, emails, and wishlists")
-step2_lab = tk.Label(root, text = "2. Enter your Gmail credentials")
-step3_lab = tk.Label(root, text = "3. Send emails")
+##### THIS CHANGES TEXT SIZE BUT NOT TO THE FONT SIZE INDICATED FIX THIS
+root.option_add("*Font", 10)
+#####
+step1_lab = tk.Label(root, text = "1. Add participants' names, emails, and wishlists:")
+step1_sublab = tk.Label(root, text = "(Don't forget your own information!)", font = ("TkDefaultFont", 10))
+step2_lab = tk.Label(root, text = "2. Enter your Gmail credentials:")
+step3_lab = tk.Label(root, text = "3. Send emails:")
 
 new_but = tk.Button(root, text = "New")
 edit_but = tk.Button(root, text = "Edit")
@@ -21,17 +25,18 @@ pass_ent = tk.Entry(root, text = "Password", show = "*")
 
 #Format the widgets using the grid layout
 step1_lab.grid(row = 0, column = 0)
+step1_sublab.grid(row = 1, column = 0)
 """Placeholder for table"""
-new_but.grid(row = 2, column = 0)
-edit_but.grid(row = 2, column = 1)
-del_but.grid(row = 2, column = 2)
+new_but.grid(row = 3, column = 0)
+edit_but.grid(row = 3, column = 1)
+del_but.grid(row = 3, column = 2)
 
-step2_lab.grid(row = 4, column = 0)
-email_ent.grid(row = 5, column = 0)
-pass_ent.grid(row = 5, column = 1)
+step2_lab.grid(row = 5, column = 0)
+email_ent.grid(row = 6, column = 0)
+pass_ent.grid(row = 6, column = 1)
 
-step3_lab.grid(row = 7, column = 0)
-send_but.grid(row = 8, column = 0)
+step3_lab.grid(row = 8, column = 0)
+send_but.grid(row = 9, column = 0)
 
 
 from_addr = "***SENDER'S EMAIL ADDRESS"
